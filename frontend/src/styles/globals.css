@@ -71,7 +71,14 @@
   * {
     @apply border-border;
   }
+
   body {
+    font-family: "Rubik Variable", sans-serif;
     @apply bg-background text-foreground;
+  }
+
+  .layout {
+    max-width: 80rem;
+    @apply mx-auto w-11/12;
   }
 }
