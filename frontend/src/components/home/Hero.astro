@@ -19,9 +19,24 @@ import { Icon } from "astro-icon/components";
       <div
         class="mt-5 flex items-center justify-center space-x-8 md:mt-8 md:justify-start"
       >
-        <Icon name="github" width={32} height={32} />
-        <Icon name="linkedin" width={32} height={32} />
-        <Icon name="envelope" width={32} height={32} />
+        <Icon
+          name="github"
+          width={32}
+          height={32}
+          title="antonio lopez github link"
+        />
+        <Icon
+          name="linkedin"
+          width={32}
+          height={32}
+          title="antonio lopez linkedin link"
+        />
+        <Icon
+          name="envelope"
+          width={32}
+          height={32}
+          title="antonio lopez email link"
+        />
       </div>
     </div>
 
@@ -31,7 +46,11 @@ import { Icon } from "astro-icon/components";
         aesthetics, making them not only visually appealing but also profoundly
         impactful, memorable, and meaningful to enhance people's lives.
       </p>
-      <Icon name="self-logo" class="h-56 w-60 md:h-[20.5rem] md:w-[21.5rem]" />
+      <Icon
+        name="self-logo"
+        class="h-56 w-60 md:h-[20.5rem] md:w-[21.5rem]"
+        aria-hidden="true"
+      />
     </div>
   </div>
 </section>
