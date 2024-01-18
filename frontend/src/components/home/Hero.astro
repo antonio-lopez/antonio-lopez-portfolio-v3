@@ -1,0 +1,37 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="dots py-14 md:py-[10rem]">
+  <div class="layout grid grid-cols-1 md:grid-cols-2 md:gap-20">
+    <div
+      class="mb-14 text-center font-['Bebas_Neue'] text-5xl md:mb-0 md:text-left md:text-7xl xl:text-9xl"
+    >
+      <h1 class="text-background">
+        <span class="heading-stroke-sm md:heading-stroke-lg"
+          >HELLO, <br />MY NAME IS</span
+        >
+      </h1>
+      <span
+        class="inline-block bg-gradient-to-r from-[#303C82] to-[#565D87] bg-clip-text font-['Bebas_Neue'] text-transparent"
+        >ANTONIO LOPEZ</span
+      >
+      <div
+        class="mt-5 flex items-center justify-center space-x-8 md:mt-8 md:justify-start"
+      >
+        <Icon name="github" width={32} height={32} />
+        <Icon name="linkedin" width={32} height={32} />
+        <Icon name="envelope" width={32} height={32} />
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center space-y-8">
+      <p class="text-center text-lg font-semibold md:text-left md:text-xl">
+        Crafting digital solutions that seamlessly blend functionality and
+        aesthetics, making them not only visually appealing but also profoundly
+        impactful, memorable, and meaningful to enhance people's lives.
+      </p>
+      <Icon name="self-logo" class="h-56 w-60 md:h-[20.5rem] md:w-[21.5rem]" />
+    </div>
+  </div>
+</section>

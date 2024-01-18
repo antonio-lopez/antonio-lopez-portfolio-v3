@@ -81,4 +81,25 @@
     max-width: 80rem;
     @apply mx-auto w-11/12;
   }
+
+  .dots {
+    background-image: radial-gradient(
+      hsla(50, 52.17%, 90.98%, 0.2) 5%,
+      transparent 2%
+    );
+    background-color: text-background;
+    background-position:
+      0 0,
+      50px 50px;
+    background-size: 30px 30px;
+  }
+
+  .heading-stroke-lg {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #f4f0dc;
+  }
+  .heading-stroke-sm {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f4f0dc;
+  }
 }
