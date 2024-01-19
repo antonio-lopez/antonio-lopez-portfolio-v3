@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="relative inline-block py-1 md:py-3">
+  <h2 class="inline-block text-3xl font-bold -tracking-[0.012] lg:text-6xl">
+    {title}
+  </h2>
+  <div
+    class="absolute bottom-1 -z-10 w-full border-[5px] border-primaryVariant500 md:border-[10px]"
+  >
+  </div>
+</div>
