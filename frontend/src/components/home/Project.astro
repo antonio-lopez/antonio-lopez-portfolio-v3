@@ -1,0 +1,93 @@
+---
+import { Icon } from "astro-icon/components";
+import ButtonLink from "../ui/ButtonLink.astro";
+import ProjectHeading from "./ProjectHeading.astro";
+import Tag from "./Tag.astro";
+
+interface Props {
+  name: string;
+  excerpt: string;
+  liveLink: string;
+  githubLink: string;
+  tags: string[];
+  imgSM: string;
+  imgLG: string;
+  height: string;
+  width: string;
+  alt: string;
+  imgStyle?: string;
+  sizes: string;
+  left?: boolean;
+}
+
+const {
+  name,
+  excerpt,
+  liveLink,
+  githubLink,
+  tags,
+  imgSM,
+  imgLG,
+  height,
+  width,
+  alt,
+  imgStyle,
+  sizes,
+  left,
+} = Astro.props;
+---
+
+<!-- left side -->
+<div class="rounded-xl bg-primaryVariant900 p-3 md:p-5">
+  <picture>
+    <source
+      type="image/webp"
+      srcset={`${imgSM} 700w, ${imgLG} 1000w`}
+      sizes={sizes}
+    />
+
+    <img
+      src={imgSM}
+      loading="lazy"
+      height={height}
+      width={width}
+      alt={alt}
+      class={imgStyle}
+    />
+  </picture>
+</div>
+
+<!-- right side -->
+<div
+  class={`${left ? "lg:row-start-2 " : ""} flex flex-col space-y-6 self-center lg:space-y-8`}
+>
+  <ProjectHeading title={name} />
+
+  <p class="lg:text-lg">
+    {excerpt}
+  </p>
+
+  <div class="flex items-center justify-between md:justify-start md:space-x-2">
+    {tags.map((tag) => <Tag tag={tag} />)}
+  </div>
+
+  <div class="flex items-center space-x-5 pb-20 lg:space-x-8 lg:py-0">
+    <ButtonLink href={liveLink} target="_blank" rel="noopener noreferrer">
+      Live
+      <Icon name="open" class="ml-2 h-5 w-5" title="link to live project" />
+    </ButtonLink>
+    <ButtonLink
+      href={githubLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      variant="secondary"
+    >
+      View Project
+      <Icon
+        name="arrow-right"
+        class="ml-2 h-5 w-5"
+        title="link to project details"
+      />
+    </ButtonLink>
+  </div>
+</div>

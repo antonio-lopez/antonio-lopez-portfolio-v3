@@ -1,79 +1,106 @@
 ---
 import SectionHeading from "../ui/SectionHeading.astro";
-import ProjectHeading from "./ProjectHeading.astro";
-import Tag from "./Tag.astro";
-import ButtonLink from "../ui/ButtonLink.astro";
-import { Icon } from "astro-icon/components";
+import Project from "./Project.astro";
+
+const projectList = [
+  {
+    name: "Sk8 N Meet Santana",
+    excerpt:
+      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
+    liveLink: "https://sk8nmeetsantana.com/",
+    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
+    tags: ["Next JS", "Sanity io", "Storybook", "Cloudinary"],
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
+    height: "370",
+    width: "700",
+    alt: "sk8 n meet santana project cover",
+    imgStyle: "rounded-xl object-cover",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+    left: false,
+  },
+  {
+    name: "Anilog",
+    excerpt:
+      "An anime and manga tracker built with NextJS and GraphQL. The Anilist GraphQL API is used for static and dynamic queries on the server and client.",
+    liveLink: "https://anilog.vercel.app/",
+    githubLink: "https://github.com/antonio-lopez/anilog",
+    tags: ["Next JS", "Tailwind CSS", "Storybook", "GraphQL"],
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687144/portfolio/anilog/anilog-cover-700w_isjjzs.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687145/portfolio/anilog/anilog-cover-1000w_yzm9v6.webp",
+    height: "370",
+    width: "700",
+    alt: "anilog project cover",
+    imgStyle: "rounded-xl object-cover",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+    left: true,
+  },
+  {
+    name: "What The Park",
+    excerpt:
+      "Explore national parks from across the United States. Ensure a seamless and stress-free journey to your destination by viewing general park information, weather conditions, and ways of getting there.",
+    liveLink: "https://what-the-park.vercel.app/",
+    githubLink: "https://github.com/antonio-lopez/what-the-park",
+    tags: ["Next JS", "Tailwind CSS", "Shadcn UI", "API"],
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687178/portfolio/what-the-park/what-the-park-cover-700w_uxsu2g.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687179/portfolio/what-the-park/what-the-park-cover-1000w_vwgfiw.webp",
+    height: "370",
+    width: "700",
+    alt: "what the park project cover",
+    imgStyle: "rounded-xl object-cover",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+    left: false,
+  },
+];
 ---
 
 <section class="layout my-20">
   <SectionHeading title="Projects" />
-  <div class="mt-14">
+  <div class="mt-10 lg:mt-14">
     <div
-      class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(300px,_650px)_1fr] lg:gap-20"
+      class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(300px,_650px)_1fr] lg:gap-x-20 lg:gap-y-28"
     >
-      <!-- left side -->
-      <div class="rounded-xl bg-primaryVariant900 p-5">
-        <picture>
-          <source
-            type="image/webp"
-            srcset="https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp 700w, https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp 1000w"
-            sizes="(max-width: 200px) 100vw, 45vw"
-          />
-
-          <img
-            src="https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp"
-            loading="lazy"
-            height="370"
-            width="700"
-            alt="project one"
-            class="rounded-xl object-cover"
-          />
-        </picture>
-      </div>
-
-      <!-- right side -->
-      <div class="flex flex-col space-y-6 self-center lg:space-y-8">
-        <ProjectHeading title="Sk8 N Meet Santana" />
-        <p class="lg:text-lg">
-          The Sk8NMeet Santana website where you can view upcoming / past
-          meetups, photos from meetups, and contact team members.
-        </p>
-
-        <div class="inline-block space-y-3 lg:space-x-2 lg:space-y-0">
-          <Tag tag="Next JS" />
-          <Tag tag="Sanity io" />
-          <Tag tag="Storybook" />
-          <Tag tag="Cloudinary" />
-        </div>
-        <div class="flex items-center space-x-5 lg:space-x-8">
-          <ButtonLink
-            href="https://github.com/antonio-lopez/anilog"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live
-            <Icon
-              name="open"
-              class="ml-2 h-5 w-5"
-              title="link to live project"
+      {
+        projectList.map(
+          ({
+            name,
+            excerpt,
+            liveLink,
+            githubLink,
+            tags,
+            imgSM,
+            imgLG,
+            height,
+            width,
+            alt,
+            imgStyle,
+            sizes,
+            left,
+          }) => (
+            <Project
+              name={name}
+              excerpt={excerpt}
+              liveLink={liveLink}
+              githubLink={githubLink}
+              tags={tags}
+              imgSM={imgSM}
+              imgLG={imgLG}
+              height={height}
+              width={width}
+              alt={alt}
+              imgStyle={imgStyle}
+              sizes={sizes}
+              left={left}
             />
-          </ButtonLink>
-          <ButtonLink
-            href="https://github.com/antonio-lopez/anilog"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="secondary"
-          >
-            View Project
-            <Icon
-              name="arrow-right"
-              class="ml-2 h-5 w-5"
-              title="link to project details"
-            />
-          </ButtonLink>
-        </div>
-      </div>
+          ),
+        )
+      }
     </div>
   </div>
 </section>
