@@ -20,6 +20,7 @@ const projectList = [
     imgStyle: "rounded-xl object-cover",
     sizes: "(max-width: 200px) 100vw, 45vw",
     left: false,
+    order: "01",
   },
   {
     name: "Anilog",
@@ -38,6 +39,7 @@ const projectList = [
     imgStyle: "rounded-xl object-cover",
     sizes: "(max-width: 200px) 100vw, 45vw",
     left: true,
+    order: "02",
   },
   {
     name: "What The Park",
@@ -56,6 +58,7 @@ const projectList = [
     imgStyle: "rounded-xl object-cover",
     sizes: "(max-width: 200px) 100vw, 45vw",
     left: false,
+    order: "03",
   },
 ];
 ---
@@ -82,6 +85,7 @@ const projectList = [
             imgStyle,
             sizes,
             left,
+            order,
           }) => (
             <Project
               name={name}
@@ -97,6 +101,7 @@ const projectList = [
               imgStyle={imgStyle}
               sizes={sizes}
               left={left}
+              order={order}
             />
           ),
         )

@@ -1,12 +1,13 @@
 ---
 interface Props {
   title: string;
+  order: string;
 }
 
-const { title } = Astro.props;
+const { title, order } = Astro.props;
 ---
 
 <h3 class="font-['Bebas_Neue'] text-3xl lg:text-5xl">
-  <span class="heading-stroke-sm text-background">01</span>
+  <span class="heading-stroke-sm text-background">{order}</span>
   {title}
 </h3>
