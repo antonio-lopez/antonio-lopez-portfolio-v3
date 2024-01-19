@@ -1,0 +1,79 @@
+---
+import SectionHeading from "../ui/SectionHeading.astro";
+import ProjectHeading from "./ProjectHeading.astro";
+import Tag from "./Tag.astro";
+import ButtonLink from "../ui/ButtonLink.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="layout my-20">
+  <SectionHeading title="Projects" />
+  <div class="mt-14">
+    <div
+      class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(300px,_650px)_1fr] lg:gap-20"
+    >
+      <!-- left side -->
+      <div class="rounded-xl bg-primaryVariant900 p-5">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp 700w, https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp 1000w"
+            sizes="(max-width: 200px) 100vw, 45vw"
+          />
+
+          <img
+            src="https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp"
+            loading="lazy"
+            height="370"
+            width="700"
+            alt="project one"
+            class="rounded-xl object-cover"
+          />
+        </picture>
+      </div>
+
+      <!-- right side -->
+      <div class="flex flex-col space-y-6 self-center lg:space-y-8">
+        <ProjectHeading title="Sk8 N Meet Santana" />
+        <p class="lg:text-lg">
+          The Sk8NMeet Santana website where you can view upcoming / past
+          meetups, photos from meetups, and contact team members.
+        </p>
+
+        <div class="inline-block space-y-3 lg:space-x-2 lg:space-y-0">
+          <Tag tag="Next JS" />
+          <Tag tag="Sanity io" />
+          <Tag tag="Storybook" />
+          <Tag tag="Cloudinary" />
+        </div>
+        <div class="flex items-center space-x-5 lg:space-x-8">
+          <ButtonLink
+            href="https://github.com/antonio-lopez/anilog"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live
+            <Icon
+              name="open"
+              class="ml-2 h-5 w-5"
+              title="link to live project"
+            />
+          </ButtonLink>
+          <ButtonLink
+            href="https://github.com/antonio-lopez/anilog"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="secondary"
+          >
+            View Project
+            <Icon
+              name="arrow-right"
+              class="ml-2 h-5 w-5"
+              title="link to project details"
+            />
+          </ButtonLink>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

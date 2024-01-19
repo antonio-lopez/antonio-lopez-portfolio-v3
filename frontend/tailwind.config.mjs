@@ -21,8 +21,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
         },
+        primaryVariant500: {
+          DEFAULT: "hsl(var(--primary-variant500))",
+        },
+        primaryVariant900: {
+          DEFAULT: "hsl(var(--primary-variant900))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
+        },
+        secondaryVariant900: {
+          DEFAULT: "hsl(var(--secondary-variant900))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
