@@ -1,6 +1,8 @@
 ---
 import SectionHeading from "../ui/SectionHeading.astro";
 import Project from "./Project.astro";
+import ButtonLink from "../ui/ButtonLink.astro";
+import { Icon } from "astro-icon/components";
 
 const projectList = [
   {
@@ -107,5 +109,20 @@ const projectList = [
         )
       }
     </div>
+  </div>
+  <div class="lg:mt-10">
+    <ButtonLink
+      href="/"
+      target="_blank"
+      rel="noopener noreferrer"
+      variant="secondary"
+    >
+      More Projects
+      <Icon
+        name="arrow-right"
+        class="ml-2 h-5 w-5"
+        title="link to project details"
+      />
+    </ButtonLink>
   </div>
 </section>
