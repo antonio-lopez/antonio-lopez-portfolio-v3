@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import SocialLinks from "../ui/SocialLinks.astro";
 ---
 
 <section class="dots py-14 md:py-[10rem]">
@@ -16,31 +17,7 @@ import { Icon } from "astro-icon/components";
         class="inline-block bg-gradient-to-r from-[#303C82] to-[#565D87] bg-clip-text font-['Bebas_Neue'] text-transparent"
         >ANTONIO LOPEZ</span
       >
-      <div
-        class="mt-5 flex items-center justify-center space-x-8 md:mt-8 md:justify-start"
-      >
-        <Icon
-          name="github"
-          width={32}
-          height={32}
-          title="antonio lopez github link"
-          class="transition-colors hover:text-primary"
-        />
-        <Icon
-          name="linkedin"
-          width={32}
-          height={32}
-          title="antonio lopez linkedin link"
-          class="transition-colors hover:text-primary"
-        />
-        <Icon
-          name="envelope"
-          width={32}
-          height={32}
-          title="antonio lopez email link"
-          class="transition-colors hover:text-primary"
-        />
-      </div>
+      <SocialLinks />
     </div>
 
     <div class="flex flex-col items-center justify-center space-y-8">
