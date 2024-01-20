@@ -1,0 +1,119 @@
+---
+import "@/styles/globals.css";
+import Layout from "@/layouts/Layout.astro";
+import PageHeading from "@/components/ui/PageHeading.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="About">
+  <section>
+    <div class="dots py-14">
+      <div class="layout">
+        <PageHeading
+          title="About"
+          description="Learn a bit about me and the type of person I am."
+        />
+      </div>
+    </div>
+
+    <div class="layout mb-20 mt-10 flex flex-col space-y-10 lg:text-lg">
+      <div class="flex flex-col space-y-5">
+        <p>
+          Hello! My name is Antonio Lopez. I'm a full-stack web developer based
+          in Orange County, CA. I work in the React.js ecosystem using Next.js
+          as my frontend framework of choice for complex projects but have
+          recently taken a liking to Astro due to its flexibility and reduced
+          reliance on Javascript. For expediting my styling process, I rely on
+          the utility-first framework Tailwind CSS. My content management is
+          streamlined with Sanity CMS, facilitating effortless CRUD operations.
+          Figma serves as my preferred tool for prototyping and wireframes,
+          contributing to the enhancement of my design skills.
+        </p>
+        <p>
+          As for the backend, I've seamlessly worked with both REST and GraphQL
+          APIs, employing Node.js, Express.js, and Next.js for consumption.
+          Postman aids in testing and debugging routes, while storage is managed
+          through MongoDB and Google's Firebase Firestore.
+        </p>
+        <p>
+          When I'm not staring at my computer screen all day I like to drive to
+          different cities and catch live band performances. I tend to lean
+          towards punk genres, although it changes based on my mood. I frequent
+          many craft breweries, hazy IPAs are my favorite. To maintain a
+          balanced lifestyle I workout and weight lift. I also listen to
+          podcasts, watch anime, and read manga. Got any recommendations? Let's
+          grab a pint and have a chat!
+        </p>
+      </div>
+
+      <div
+        class="mt-5 flex items-center justify-center space-x-8 md:mt-8 md:justify-start"
+      >
+        <Icon
+          name="github"
+          width={32}
+          height={32}
+          title="antonio lopez github link"
+          class="transition-colors hover:text-primary"
+        />
+        <Icon
+          name="linkedin"
+          width={32}
+          height={32}
+          title="antonio lopez linkedin link"
+          class="transition-colors hover:text-primary"
+        />
+        <Icon
+          name="envelope"
+          width={32}
+          height={32}
+          title="antonio lopez email link"
+          class="transition-colors hover:text-primary"
+        />
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-5 md:gap-0">
+        <div>
+          <p class="font-semibold">Frontend</p>
+          <ul class="ml-8 mt-4 list-outside list-disc">
+            <li>Next JS</li>
+            <li>Astro</li>
+            <li>React</li>
+            <li>Typscript</li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold">Backend</p>
+          <ul class="ml-8 mt-4 list-outside list-disc">
+            <li>Sanity io</li>
+            <li>Postman</li>
+            <li>MongoDB</li>
+            <li>Docker</li>
+          </ul>
+        </div><div>
+          <p class="font-semibold">API</p>
+          <ul class="ml-8 mt-4 list-outside list-disc">
+            <li>GraphQL</li>
+            <li>REST</li>
+          </ul>
+        </div><div>
+          <p class="font-semibold">Stlying</p>
+          <ul class="ml-8 mt-4 list-outside list-disc">
+            <li>Tailwind CSS</li>
+            <li>Figma</li>
+            <li>Shadcn UI</li>
+            <li>Storybook</li>
+            <li>CSS 3</li>
+          </ul>
+        </div><div>
+          <p class="font-semibold">Hosting</p>
+          <ul class="ml-8 mt-4 list-outside list-disc">
+            <li>Vercel</li>
+            <li>Netlify</li>
+            <li>Cloudinary</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
