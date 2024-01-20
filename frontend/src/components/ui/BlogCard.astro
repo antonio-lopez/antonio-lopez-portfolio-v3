@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon/components";
+import ButtonLink from "./ButtonLink.astro";
+
+interface Props {
+  imgSM: string;
+  imgLG: string;
+  sizes: string;
+  height: string;
+  width: string;
+  alt: string;
+  imgStyle: string;
+  blogTitle: string;
+  date: string;
+  description: string;
+}
+
+const {
+  blogTitle,
+  imgSM,
+  imgLG,
+  height,
+  width,
+  alt,
+  imgStyle,
+  sizes,
+  date,
+  description,
+} = Astro.props;
+---
+
+<div
+  class="flex flex-col space-y-6 rounded-xl border border-primary p-4 hover:bg-primaryVariant900"
+>
+  <picture>
+    <source
+      type="image/webp"
+      srcset={`${imgSM} 700w, ${imgLG} 1000w`}
+      sizes={sizes}
+    />
+
+    <img
+      src={imgSM}
+      loading="lazy"
+      height={height}
+      width={width}
+      alt={alt}
+      class={imgStyle}
+    />
+  </picture>
+
+  <div class="flex flex-col space-y-1">
+    <h3 class="text-xl font-semibold lg:text-2xl">
+      {blogTitle}
+    </h3>
+    <p class="font-semibold lg:text-lg">{date}</p>
+    <p class="lg:text-lg">
+      {description}
+    </p>
+  </div>
+
+  <ButtonLink href="/" variant="link" size="link">
+    See more
+    <Icon name="arrow-right" class="ml-[2px] h-6 w-7" title="link to blog" />
+  </ButtonLink>
+</div>
