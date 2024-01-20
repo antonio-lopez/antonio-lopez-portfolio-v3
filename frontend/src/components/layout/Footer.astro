@@ -9,14 +9,14 @@ const currentYear = new Date().getFullYear();
     class="layout flex flex-col items-center justify-center space-y-14 font-medium lg:space-y-16 lg:text-lg"
   >
     <ul class="flex items-center justify-center space-x-7 md:space-x-11">
-      <li>
-        <a href="/" class="underline-offset-4 hover:underline">Projects</a>
+      <li class="transition-colors hover:bg-primary">
+        <a href="/">Projects</a>
       </li>
-      <li>
-        <a href="/" class="underline-offset-4 hover:underline">About</a>
+      <li class="transition-colors hover:bg-primary">
+        <a href="/">About</a>
       </li>
-      <li>
-        <a href="/" class="underline-offset-4 hover:underline">Blog</a>
+      <li class="transition-colors hover:bg-primary">
+        <a href="/">Blog</a>
       </li>
     </ul>
 
@@ -28,18 +28,21 @@ const currentYear = new Date().getFullYear();
         width={32}
         height={32}
         title="antonio lopez github link"
+        class="transition-colors hover:text-primary"
       />
       <Icon
         name="linkedin"
         width={32}
         height={32}
         title="antonio lopez linkedin link"
+        class="transition-colors hover:text-primary"
       />
       <Icon
         name="envelope"
         width={32}
         height={32}
         title="antonio lopez email link"
+        class="transition-colors hover:text-primary"
       />
     </div>
 
