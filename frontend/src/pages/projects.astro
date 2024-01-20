@@ -1,0 +1,154 @@
+---
+import "@/styles/globals.css";
+import Layout from "@/layouts/Layout.astro";
+import PageHeading from "@/components/ui/PageHeading.astro";
+import ProjectCard from "@/components/ui/ProjectCard.astro";
+
+const projectList = [
+  {
+    projectTitle: "Sk8 N Meet Santana",
+    excerpt:
+      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
+    liveLink: "https://sk8nmeetsantana.com/",
+    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
+    height: "370",
+    width: "700",
+    alt: "sk8 n meet santana project cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+  },
+  {
+    projectTitle: "Sk8 N Meet Santana",
+    excerpt:
+      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
+    liveLink: "https://sk8nmeetsantana.com/",
+    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
+    height: "370",
+    width: "700",
+    alt: "sk8 n meet santana project cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+  },
+  {
+    projectTitle: "Sk8 N Meet Santana",
+    excerpt:
+      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
+    liveLink: "https://sk8nmeetsantana.com/",
+    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
+    height: "370",
+    width: "700",
+    alt: "sk8 n meet santana project cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+  },
+  {
+    projectTitle: "Sk8 N Meet Santana",
+    excerpt:
+      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
+    liveLink: "https://sk8nmeetsantana.com/",
+    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
+    height: "370",
+    width: "700",
+    alt: "sk8 n meet santana project cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+  },
+  {
+    projectTitle: "Sk8 N Meet Santana",
+    excerpt:
+      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
+    liveLink: "https://sk8nmeetsantana.com/",
+    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
+    height: "370",
+    width: "700",
+    alt: "sk8 n meet santana project cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+  },
+  {
+    projectTitle: "Sk8 N Meet Santana",
+    excerpt:
+      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
+    liveLink: "https://sk8nmeetsantana.com/",
+    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
+    imgSM:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
+    imgLG:
+      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
+    height: "370",
+    width: "700",
+    alt: "sk8 n meet santana project cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
+    sizes: "(max-width: 200px) 100vw, 45vw",
+  },
+];
+---
+
+<Layout title="Projects">
+  <section>
+    <div class="dots py-14">
+      <div class="layout">
+        <PageHeading
+          title="Projects"
+          description="A compilation of projects that demonstrate my proficiency in both frontend and backend development. I consistently enhance my skills and acquire new knowledge, continually advancing as a developer."
+        />
+      </div>
+    </div>
+
+    <div class="layout mt-10 pb-20">
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {
+          projectList.map(
+            ({
+              projectTitle,
+              excerpt,
+              liveLink,
+              githubLink,
+              imgSM,
+              imgLG,
+              height,
+              width,
+              alt,
+              imgStyle,
+              sizes,
+            }) => (
+              <ProjectCard
+                projectTitle={projectTitle}
+                excerpt={excerpt}
+                liveLink={liveLink}
+                githubLink={githubLink}
+                imgSM={imgSM}
+                imgLG={imgLG}
+                height={height}
+                width={width}
+                alt={alt}
+                imgStyle={imgStyle}
+                sizes={sizes}
+              />
+            ),
+          )
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
