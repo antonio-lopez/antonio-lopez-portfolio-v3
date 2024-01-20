@@ -19,7 +19,7 @@ const projectList = [
     height: "370",
     width: "700",
     alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
     sizes: "(max-width: 200px) 100vw, 45vw",
     left: false,
     order: "01",
@@ -38,7 +38,7 @@ const projectList = [
     height: "370",
     width: "700",
     alt: "anilog project cover",
-    imgStyle: "rounded-xl object-cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
     sizes: "(max-width: 200px) 100vw, 45vw",
     left: true,
     order: "02",
@@ -57,7 +57,7 @@ const projectList = [
     height: "370",
     width: "700",
     alt: "what the park project cover",
-    imgStyle: "rounded-xl object-cover",
+    imgStyle: "rounded-xl object-cover h-full w-full",
     sizes: "(max-width: 200px) 100vw, 45vw",
     left: false,
     order: "03",
@@ -68,9 +68,7 @@ const projectList = [
 <section class="layout my-20">
   <SectionHeading title="Projects" />
   <div class="mt-10 lg:mt-14">
-    <div
-      class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(300px,_650px)_1fr] lg:gap-x-20 lg:gap-y-28"
-    >
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-x-20 lg:gap-y-28">
       {
         projectList.map(
           ({
