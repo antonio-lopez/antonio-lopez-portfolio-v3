@@ -18,10 +18,11 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-foreground underline-offset-4 hover:underline",
+        link: "text-foreground underline-offset-4 hover:underline justify-start",
       },
       size: {
         default: "h-14 px-7 py-4",
+        link: "h-7",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",

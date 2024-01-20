@@ -1,0 +1,157 @@
+---
+import SectionHeading from "../ui/SectionHeading.astro";
+import ButtonLink from "../ui/ButtonLink.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="layout my-10 py-20 lg:my-20">
+  <SectionHeading title="Blogs" />
+  <div
+    class="my-10 grid grid-cols-1 gap-10 md:grid-cols-2 lg:mt-14 lg:grid-cols-3"
+  >
+    <div
+      class="flex flex-col space-y-6 rounded-xl border border-primary p-4 hover:bg-primaryVariant900"
+    >
+      <picture>
+        <source
+          type="image/webp"
+          srcset="https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp 700w, https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp 1000w"
+          sizes="(max-width: 200px) 100vw, 45vw"
+        />
+
+        <img
+          src="https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp"
+          loading="lazy"
+          height="1000"
+          width="1000"
+          alt="blog"
+          class="h-[12.5rem] rounded-t-xl object-cover"
+        />
+      </picture>
+
+      <div class="flex flex-col space-y-1">
+        <h3 class="text-xl font-semibold lg:text-2xl">
+          Shorten a string to max length
+        </h3>
+        <p class="font-semibold lg:text-lg">December 12, 2023</p>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+
+      <ButtonLink
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="link"
+        size="link"
+      >
+        See more
+        <Icon
+          name="arrow-right"
+          class="ml-[2px] h-6 w-7"
+          title="link to blog"
+        />
+      </ButtonLink>
+    </div>
+    <div
+      class="flex flex-col space-y-6 rounded-xl border border-primary p-4 hover:bg-primaryVariant900"
+    >
+      <picture>
+        <source
+          type="image/webp"
+          srcset="https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp 700w, https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp 1000w"
+          sizes="(max-width: 200px) 100vw, 45vw"
+        />
+
+        <img
+          src="https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp"
+          loading="lazy"
+          height="1000"
+          width="1000"
+          alt="blog"
+          class="h-[12.5rem] rounded-t-xl object-cover"
+        />
+      </picture>
+
+      <div class="flex flex-col space-y-1">
+        <h3 class="text-xl font-semibold lg:text-2xl">
+          Shorten a string to max length
+        </h3>
+        <p class="font-semibold lg:text-lg">December 12, 2023</p>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+
+      <ButtonLink
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="link"
+        size="link"
+      >
+        See more
+        <Icon
+          name="arrow-right"
+          class="ml-[2px] h-6 w-7"
+          title="link to blog"
+        />
+      </ButtonLink>
+    </div>
+    <div
+      class="flex flex-col space-y-6 rounded-xl border border-primary p-4 hover:bg-primaryVariant900"
+    >
+      <picture>
+        <source
+          type="image/webp"
+          srcset="https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp 700w, https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp 1000w"
+          sizes="(max-width: 200px) 100vw, 45vw"
+        />
+
+        <img
+          src="https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp"
+          loading="lazy"
+          height="1000"
+          width="1000"
+          alt="blog"
+          class="h-[12.5rem] rounded-t-xl object-cover"
+        />
+      </picture>
+
+      <div class="flex flex-col space-y-1">
+        <h3 class="text-xl font-semibold lg:text-2xl">
+          Shorten a string to max length
+        </h3>
+        <p class="font-semibold lg:text-lg">December 12, 2023</p>
+        <p class="lg:text-lg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+
+      <ButtonLink
+        href="/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="link"
+        size="link"
+      >
+        See more
+        <Icon
+          name="arrow-right"
+          class="ml-[2px] h-6 w-7"
+          title="link to blog"
+        />
+      </ButtonLink>
+    </div>
+  </div>
+</div>
