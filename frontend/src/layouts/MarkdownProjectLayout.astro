@@ -1,0 +1,102 @@
+---
+import BaseLayout from "./Layout.astro";
+import ProjectShowcaseTitle from "../components/ui/ProjectShowcaseTitle.astro";
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+import { Icon } from "astro-icon/components";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.projectTitle}>
+  <article>
+    <div class="dots py-14">
+      <div class="layout">
+        <ProjectShowcaseTitle title={frontmatter.projectTitle} />
+      </div>
+    </div>
+
+    <div class="articleLayout mt-5 flex flex-col space-y-5">
+      <div class="self-center">
+        <picture>
+          <source
+            type="image/webp"
+            srcset={`${frontmatter.imageSm.url} 700w, ${frontmatter.imageLg.url} 1000w`}
+            sizes={frontmatter.sizes}
+          />
+
+          <img
+            src={frontmatter.imageSm.url}
+            loading="lazy"
+            height={frontmatter.height}
+            width={frontmatter.width}
+            alt={frontmatter.imageSm.alt}
+            class={frontmatter.imgStyle}
+          />
+        </picture>
+      </div>
+
+      <div class="flex flex-col space-y-5 pb-10 lg:text-lg">
+        <p>{frontmatter.excerpt}</p>
+        <div
+          class="md: flex items-center justify-between md:justify-start md:space-x-4"
+        >
+          <ButtonLink
+            href={frontmatter.liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="sm"
+          >
+            Live
+            <Icon
+              name="open"
+              class="ml-2 h-5 w-5"
+              title="link to live project"
+            />
+          </ButtonLink>
+          <ButtonLink
+            href={frontmatter.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="sm"
+          >
+            Code
+            <Icon
+              name="github"
+              class="ml-2 h-5 w-5"
+              title="link to project github"
+            />
+          </ButtonLink>
+          <ButtonLink
+            href={frontmatter.figmaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="sm"
+          >
+            Figma
+            <Icon
+              name="figma"
+              class="ml-2 h-5 w-5"
+              title="link to project design"
+            />
+          </ButtonLink>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-[auto,250px]">
+        <slot />
+        <aside
+          class="row-start-1 md:sticky md:top-36 md:col-start-2 md:max-h-[calc(100vh-9rem-113px)] md:overflow-auto"
+        >
+          <p class="mb-4 text-lg font-semibold lg:text-xl">Table of Contents</p>
+          <ol>
+            <li>About The Project</li>
+            <li>Project Goals</li>
+            <li>Built With</li>
+            <li>Development</li>
+            <li>Challenges</li>
+            <li>Learning Experience</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
