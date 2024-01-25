@@ -16,6 +16,6 @@ sizes: "(max-width: 200px) 100vw, 45vw"
 githubLink: "https://github.com/antonio-lopez/what-the-park"
 liveLink: "https://what-the-park.vercel.app/"
 figmaLink: "https://www.figma.com/file/yYoBGsOuvNCMQpRdb3vzhJ/What-The-Park?type=design&mode=design&t=PoMywHtsQC8y7Bm4-1"
-tags: ["Next JS", "Tailwind CSS", "Shadcn UI", "API"]
+tags: ["Next JS", "Shadcn UI", "API", "Tailwind CSS"]
 order: "03"
 ---

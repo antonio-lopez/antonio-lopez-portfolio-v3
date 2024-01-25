@@ -35,6 +35,8 @@ const {
   order,
   slug,
 } = Astro.props;
+
+const mobileTags = tags.slice(0, 3);
 ---
 
 <!-- left side -->
@@ -68,7 +70,15 @@ const {
     {excerpt}
   </p>
 
-  <div class="flex items-center justify-between md:justify-start md:space-x-2">
+  <!-- mobile tags -->
+  <div class="flex items-center space-x-3 text-center md:hidden">
+    {mobileTags.map((tag) => <Tag tag={tag} />)}
+  </div>
+
+  <!-- desktop tags -->
+  <div
+    class="hidden items-center justify-between text-center md:flex md:justify-start md:space-x-2"
+  >
     {tags.map((tag) => <Tag tag={tag} />)}
   </div>
 

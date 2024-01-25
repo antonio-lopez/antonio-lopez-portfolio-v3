@@ -16,7 +16,7 @@ sizes: "(max-width: 200px) 100vw, 45vw"
 githubLink: "https://github.com/antonio-lopez/anilog"
 liveLink: "https://anilog.vercel.app/"
 figmaLink: "https://www.figma.com/file/wGhHnZDT59jzUZmz7RX6dG/ani-tracker?node-id=0%3A1&t=KSLPSVErdBmo5bLP-1"
-tags: ["Next JS", "Tailwind CSS", "Storybook", "GraphQL"]
+tags: ["Next JS", "Storybook", "GraphQL", "Tailwind CSS"]
 order: "02"
 left: true
 ---
