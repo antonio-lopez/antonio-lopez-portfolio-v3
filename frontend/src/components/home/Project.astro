@@ -5,37 +5,35 @@ import ProjectHeading from "./ProjectHeading.astro";
 import Tag from "./Tag.astro";
 
 interface Props {
-  name: string;
+  projectTitle: string;
   excerpt: string;
   liveLink: string;
-  githubLink: string;
   tags: string[];
-  imgSM: string;
-  imgLG: string;
+  imageSm: string;
+  imageLg: string;
   height: string;
   width: string;
   alt: string;
-  imgStyle?: string;
   sizes: string;
   left?: boolean;
   order: string;
+  slug: string;
 }
 
 const {
-  name,
+  projectTitle,
   excerpt,
   liveLink,
-  githubLink,
   tags,
-  imgSM,
-  imgLG,
+  imageSm,
+  imageLg,
   height,
   width,
   alt,
-  imgStyle,
   sizes,
   left,
   order,
+  slug,
 } = Astro.props;
 ---
 
@@ -44,17 +42,18 @@ const {
   <picture>
     <source
       type="image/webp"
-      srcset={`${imgSM} 700w, ${imgLG} 1000w`}
+      srcset={`${imageSm} 700w, ${imageLg} 1000w`}
       sizes={sizes}
     />
 
     <img
-      src={imgSM}
+      src={imageSm}
       loading="lazy"
       height={height}
       width={width}
       alt={alt}
-      class={imgStyle}
+      class="h-full w-full rounded-xl object-cover"
+      ,
     />
   </picture>
 </div>
@@ -63,7 +62,7 @@ const {
 <div
   class={`${left ? "lg:row-start-2 " : ""} flex flex-col space-y-6 self-center lg:space-y-8`}
 >
-  <ProjectHeading order={order} title={name} />
+  <ProjectHeading order={order} title={projectTitle} />
 
   <p class="lg:text-lg">
     {excerpt}
@@ -78,12 +77,7 @@ const {
       Live
       <Icon name="open" class="ml-2 h-5 w-5" title="link to live project" />
     </ButtonLink>
-    <ButtonLink
-      href={githubLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      variant="secondary"
-    >
+    <ButtonLink href={"/projects/" + slug} variant="secondary">
       View Project
       <Icon
         name="arrow-right"

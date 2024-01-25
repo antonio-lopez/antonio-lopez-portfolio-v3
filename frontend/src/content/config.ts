@@ -1,3 +1,4 @@
+import { boolean } from "astro/zod";
 import { z, defineCollection } from "astro:content";
 
 const projectsCollection = defineCollection({
@@ -22,6 +23,8 @@ const projectsCollection = defineCollection({
     githubLink: z.string().url(),
     liveLink: z.string().url(),
     figmaLink: z.string().url().optional(),
+    left: z.boolean().optional(),
+    order: z.string(),
   }),
 });
 

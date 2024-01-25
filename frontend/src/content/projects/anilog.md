@@ -17,4 +17,6 @@ githubLink: "https://github.com/antonio-lopez/anilog"
 liveLink: "https://anilog.vercel.app/"
 figmaLink: "https://www.figma.com/file/wGhHnZDT59jzUZmz7RX6dG/ani-tracker?node-id=0%3A1&t=KSLPSVErdBmo5bLP-1"
 tags: ["Next JS", "Tailwind CSS", "Storybook", "GraphQL"]
+order: "02"
+left: true
 ---

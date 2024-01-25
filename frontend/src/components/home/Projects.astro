@@ -3,66 +3,12 @@ import SectionHeading from "../ui/SectionHeading.astro";
 import Project from "./Project.astro";
 import ButtonLink from "../ui/ButtonLink.astro";
 import { Icon } from "astro-icon/components";
+import { getEntry } from "astro:content";
 
-const projectList = [
-  {
-    name: "Sk8 N Meet Santana",
-    excerpt:
-      "Official website for the first non-traditional skateboarding group in Santa Ana who hosts monthly meet ups for all skill levels. Their aim is to provide thriving safe spaces for skaters who identify as female, queer, trans and/or nonbinary.",
-    liveLink: "https://sk8nmeetsantana.com/",
-    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
-    tags: ["Next JS", "Sanity io", "Storybook", "Cloudinary"],
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
-    height: "370",
-    width: "700",
-    alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-    left: false,
-    order: "01",
-  },
-  {
-    name: "Anilog",
-    excerpt:
-      "A NextJS anime and manga tracker utilizing the Anilist GraphQL API. See what is currently trending, explore the all-time favorites, or uncover something fresh.",
-    liveLink: "https://anilog.vercel.app/",
-    githubLink: "https://github.com/antonio-lopez/anilog",
-    tags: ["Next JS", "Tailwind CSS", "Storybook", "GraphQL"],
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687144/portfolio/anilog/anilog-cover-700w_isjjzs.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687145/portfolio/anilog/anilog-cover-1000w_yzm9v6.webp",
-    height: "370",
-    width: "700",
-    alt: "anilog project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-    left: true,
-    order: "02",
-  },
-  {
-    name: "What The Park",
-    excerpt:
-      "Explore national parks from across the United States. Ensure a seamless and stress-free journey to your destination by viewing general park information, weather conditions, and ways of getting there.",
-    liveLink: "https://what-the-park.vercel.app/",
-    githubLink: "https://github.com/antonio-lopez/what-the-park",
-    tags: ["Next JS", "Tailwind CSS", "Shadcn UI", "API"],
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687178/portfolio/what-the-park/what-the-park-cover-700w_uxsu2g.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705687179/portfolio/what-the-park/what-the-park-cover-1000w_vwgfiw.webp",
-    height: "370",
-    width: "700",
-    alt: "what the park project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-    left: false,
-    order: "03",
-  },
-];
+const sk8nmeetProject = await getEntry("projects", "sk8-n-meet-santana");
+const anilogProject = await getEntry("projects", "anilog");
+const whatTheParkProject = await getEntry("projects", "what-the-park");
+const projectList = [sk8nmeetProject, anilogProject, whatTheParkProject];
 ---
 
 <section class="layout my-20">
@@ -70,41 +16,23 @@ const projectList = [
   <div class="mt-10 lg:mt-14">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-x-20 lg:gap-y-28">
       {
-        projectList.map(
-          ({
-            name,
-            excerpt,
-            liveLink,
-            githubLink,
-            tags,
-            imgSM,
-            imgLG,
-            height,
-            width,
-            alt,
-            imgStyle,
-            sizes,
-            left,
-            order,
-          }) => (
-            <Project
-              name={name}
-              excerpt={excerpt}
-              liveLink={liveLink}
-              githubLink={githubLink}
-              tags={tags}
-              imgSM={imgSM}
-              imgLG={imgLG}
-              height={height}
-              width={width}
-              alt={alt}
-              imgStyle={imgStyle}
-              sizes={sizes}
-              left={left}
-              order={order}
-            />
-          ),
-        )
+        projectList.map((project) => (
+          <Project
+            projectTitle={project.data.projectTitle}
+            excerpt={project.data.excerpt}
+            liveLink={project.data.liveLink}
+            imageSm={project.data.imageSm.url}
+            imageLg={project.data.imageLg.url}
+            height={project.data.height}
+            width={project.data.width}
+            alt={project.data.imageSm.alt}
+            sizes={project.data.sizes}
+            slug={project.slug}
+            left={project.data.left}
+            order={project.data.order}
+            tags={project.data.tags}
+          />
+        ))
       }
     </div>
   </div>
