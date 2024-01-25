@@ -2,7 +2,7 @@
 projectTitle: "Sk8 N Meet Santana"
 pubDate: 2024-08-01
 excerpt: "Official website for the first non-traditional skateboarding group in Santa Ana who hosts monthly meet ups for all skill levels. Their aim is to provide thriving safe spaces for skaters who identify as female, queer, trans and/or nonbinary."
-author: "Astro Learner"
+author: "Antonio Lopez"
 imageSm:
   url: "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp"
   alt: "Sk8 N Meet project cover"
@@ -16,7 +16,7 @@ sizes: "(max-width: 200px) 100vw, 45vw"
 githubLink: "https://github.com/antonio-lopez/sk8-n-meet"
 liveLink: "https://sk8nmeetsantana.com/"
 figmaLink: "https://www.figma.com/file/sEyQoPJFrbL2WFhx2FFDtY/Sk8NMeet?node-id=0%3A1&t=Xbab4PpbzSwldwkS-1"
-tags: ["astro", "blogging", "learning in public"]
+tags: ["Next JS", "Sanity io", "Storybook", "Cloudinary"]
 ---
 
 ## Sk8 N Meet Santana

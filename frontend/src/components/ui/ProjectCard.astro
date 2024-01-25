@@ -3,8 +3,8 @@ import { Icon } from "astro-icon/components";
 import ButtonLink from "./ButtonLink.astro";
 
 interface Props {
-  imgSM: string;
-  imgLG: string;
+  imageSm: string;
+  imageLg: string;
   sizes: string;
   height: string;
   width: string;
@@ -13,20 +13,20 @@ interface Props {
   projectTitle: string;
   excerpt: string;
   liveLink: string;
-  githubLink: string;
+  slug: string;
 }
 
 const {
   projectTitle,
-  imgSM,
-  imgLG,
+  imageSm,
+  imageLg,
   height,
   width,
   alt,
   imgStyle,
   sizes,
   liveLink,
-  githubLink,
+  slug,
   excerpt,
 } = Astro.props;
 ---
@@ -35,12 +35,12 @@ const {
   <picture>
     <source
       type="image/webp"
-      srcset={`${imgSM} 700w, ${imgLG} 1000w`}
+      srcset={`${imageSm} 700w, ${imageLg} 1000w`}
       sizes={sizes}
     />
 
     <img
-      src={imgSM}
+      src={imageSm}
       loading="lazy"
       height={height}
       width={width}
@@ -63,12 +63,7 @@ const {
       Live
       <Icon name="open" class="ml-2 h-5 w-5" title="link to live project" />
     </ButtonLink>
-    <ButtonLink
-      href={githubLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      variant="secondary"
-    >
+    <ButtonLink href={"/projects/" + slug} variant="secondary">
       View Project
       <Icon
         name="arrow-right"

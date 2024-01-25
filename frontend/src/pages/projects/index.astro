@@ -3,105 +3,12 @@ import "@/styles/globals.css";
 import Layout from "@/layouts/Layout.astro";
 import PageHeading from "@/components/ui/PageHeading.astro";
 import ProjectCard from "@/components/ui/ProjectCard.astro";
+import { getCollection } from "astro:content";
 
-const projectList = [
-  {
-    projectTitle: "Sk8 N Meet Santana",
-    excerpt:
-      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
-    liveLink: "https://sk8nmeetsantana.com/",
-    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
-    height: "370",
-    width: "700",
-    alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-  },
-  {
-    projectTitle: "Sk8 N Meet Santana",
-    excerpt:
-      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
-    liveLink: "https://sk8nmeetsantana.com/",
-    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
-    height: "370",
-    width: "700",
-    alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-  },
-  {
-    projectTitle: "Sk8 N Meet Santana",
-    excerpt:
-      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
-    liveLink: "https://sk8nmeetsantana.com/",
-    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
-    height: "370",
-    width: "700",
-    alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-  },
-  {
-    projectTitle: "Sk8 N Meet Santana",
-    excerpt:
-      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
-    liveLink: "https://sk8nmeetsantana.com/",
-    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
-    height: "370",
-    width: "700",
-    alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-  },
-  {
-    projectTitle: "Sk8 N Meet Santana",
-    excerpt:
-      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
-    liveLink: "https://sk8nmeetsantana.com/",
-    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
-    height: "370",
-    width: "700",
-    alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-  },
-  {
-    projectTitle: "Sk8 N Meet Santana",
-    excerpt:
-      "The Sk8NMeet Santana website where you can view upcoming / past meetups, photos from meetups, and contact team members.",
-    liveLink: "https://sk8nmeetsantana.com/",
-    githubLink: "https://github.com/antonio-lopez/sk8-n-meet",
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705622566/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover700w_gfpq8f.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705681879/portfolio/sk8-n-meet-santana/sk8nmeet-santana-cover1000w_jwjbxl.webp",
-    height: "370",
-    width: "700",
-    alt: "sk8 n meet santana project cover",
-    imgStyle: "rounded-xl object-cover h-full w-full",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-  },
-];
+const projectList = await getCollection("projects");
+// projectList.sort((a, b) =>
+//   b.data.projectTitle.localeCompare(a.data.projectTitle),
+// );
 ---
 
 <Layout title="Projects">
@@ -118,35 +25,21 @@ const projectList = [
     <div class="layout mt-10 pb-20">
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {
-          projectList.map(
-            ({
-              projectTitle,
-              excerpt,
-              liveLink,
-              githubLink,
-              imgSM,
-              imgLG,
-              height,
-              width,
-              alt,
-              imgStyle,
-              sizes,
-            }) => (
-              <ProjectCard
-                projectTitle={projectTitle}
-                excerpt={excerpt}
-                liveLink={liveLink}
-                githubLink={githubLink}
-                imgSM={imgSM}
-                imgLG={imgLG}
-                height={height}
-                width={width}
-                alt={alt}
-                imgStyle={imgStyle}
-                sizes={sizes}
-              />
-            ),
-          )
+          projectList.map((project) => (
+            <ProjectCard
+              projectTitle={project.data.projectTitle}
+              excerpt={project.data.excerpt}
+              liveLink={project.data.liveLink}
+              imageSm={project.data.imageSm.url}
+              imageLg={project.data.imageLg.url}
+              height={project.data.height}
+              width={project.data.width}
+              alt={project.data.imageSm.alt}
+              imgStyle={project.data.imgStyle}
+              sizes={project.data.sizes}
+              slug={project.slug}
+            />
+          ))
         }
       </div>
     </div>
