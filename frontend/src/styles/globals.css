@@ -72,6 +72,10 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: "Rubik Variable", sans-serif;
     @apply bg-background text-foreground;

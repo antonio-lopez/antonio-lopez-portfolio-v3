@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props;
       </div>
     </div>
 
-    <div class="articleLayout mt-5 flex flex-col space-y-5">
+    <div class="articleLayout mb-20 mt-5 flex flex-col space-y-5">
       <div class="self-center">
         <picture>
           <source
@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props;
         </picture>
       </div>
 
-      <div class="flex flex-col space-y-5 pb-10 lg:text-lg">
+      <div class="flex flex-col space-y-5 lg:text-lg">
         <p>{frontmatter.excerpt}</p>
         <div
           class="md: flex items-center justify-between md:justify-start md:space-x-4"
@@ -81,6 +81,8 @@ const { frontmatter } = Astro.props;
         </div>
       </div>
 
+      <hr class="border-foreground/20" />
+
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-[auto,250px]">
         <slot />
         <aside
@@ -88,15 +90,47 @@ const { frontmatter } = Astro.props;
         >
           <p class="mb-4 text-lg font-semibold lg:text-xl">Table of Contents</p>
           <ol>
-            <li>About The Project</li>
-            <li>Project Goals</li>
-            <li>Built With</li>
-            <li>Development</li>
-            <li>Challenges</li>
-            <li>Learning Experience</li>
+            <a href="#about-the-project"
+              ><li class="transition-colors hover:bg-primary">
+                About The Project
+              </li></a
+            >
+            <a href="#project-goals"
+              ><li class="transition-colors hover:bg-primary">
+                Project Goals
+              </li></a
+            >
+            <a href="#built-with"
+              ><li class="transition-colors hover:bg-primary">Built With</li></a
+            >
+            <a href="#development"
+              ><li class="transition-colors hover:bg-primary">
+                Development
+              </li></a
+            >
+            <a href="#challenges"
+              ><li class="transition-colors hover:bg-primary">Challenges</li></a
+            >
+            <a href="#learning-experience"
+              ><li class="transition-colors hover:bg-primary">
+                Learning Experience
+              </li></a
+            >
+            <a href="#spotlight"
+              ><li class="transition-colors hover:bg-primary">Spotlight</li></a
+            >
           </ol>
         </aside>
       </div>
+
+      <ButtonLink href="/projects" variant="link" size="link">
+        <Icon
+          name="arrow-right"
+          class="mr-[2px] h-6 w-7 rotate-[180deg]"
+          title="link to projects"
+        />
+        Back to projects
+      </ButtonLink>
     </div>
   </article>
 </BaseLayout>
