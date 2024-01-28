@@ -1,6 +1,6 @@
 ---
 projectTitle: "Sk8 N Meet Santana"
-pubDate: 2024-08-01
+pubDate: 2022-12-26
 excerpt: "Official website for the first non-traditional skateboarding group in Santa Ana who hosts monthly meet ups for all skill levels. Their aim is to provide thriving safe spaces for skaters who identify as female, queer, trans and/or nonbinary."
 author: "Antonio Lopez"
 imageSm:
@@ -53,6 +53,8 @@ I maintained daily communication with the client throughout the design phase. Re
 <img src="https://res.cloudinary.com/dloisor1x/image/upload/v1706288389/portfolio/sk8-n-meet-santana/Sk8_N_Meet_Santana_Website-main-page-1000w_s7hi5n.webp" alt="Sk8 N Meet project mockups" width="700" loading="lazy" class="my-5 w-full">
 
 <img src="https://res.cloudinary.com/dloisor1x/image/upload/v1706288389/portfolio/sk8-n-meet-santana/Sk8_N_Meet_Santana_about-page-1000w_fufzpr.webp" alt="Sk8 N Meet project mockups" width="700" loading="lazy" class="my-5 w-full">
+
+<img src="https://res.cloudinary.com/dloisor1x/image/upload/v1706306258/portfolio/sk8-n-meet-santana/sk8nmeet-figma-1000w_py0sv4.webp" alt="Sk8 N Meet project mockups" width="700" loading="lazy" class="my-5 w-full">
 
 Selecting the technology stack was a straightforward decision for me. Having previously employed Sanity.io and Next.js in other projects, I was impressed by the seamless integration between the two. Next.js offers versatile methods for rendering pages, including Server-side Rendering (SSR), Static Site Generation (SSG), and Client-Side Rendering (CSR) with React.
 In my case, I opted for SSG due to the infrequent changes in data, as skate meets were scheduled monthly. This choice ensures faster page responses since the pages are pre-generated at build time, aligning with the project's requirements for efficiency and responsiveness.
