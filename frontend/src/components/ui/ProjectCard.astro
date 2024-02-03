@@ -9,7 +9,6 @@ interface Props {
   height: string;
   width: string;
   alt: string;
-  imgStyle: string;
   projectTitle: string;
   excerpt: string;
   liveLink: string;
@@ -23,7 +22,6 @@ const {
   height,
   width,
   alt,
-  imgStyle,
   sizes,
   liveLink,
   slug,
@@ -45,7 +43,7 @@ const {
       height={height}
       width={width}
       alt={alt}
-      class={imgStyle}
+      class="rounded-t-xl"
     />
   </picture>
 

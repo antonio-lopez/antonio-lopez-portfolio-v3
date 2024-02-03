@@ -6,9 +6,10 @@ import ProjectCard from "@/components/ui/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
 const projectList = await getCollection("projects");
-// projectList.sort((a, b) =>
-//   b.data.projectTitle.localeCompare(a.data.projectTitle),
-// );
+projectList.sort(
+  (a, b) =>
+    -a.data.pubDate.toISOString().localeCompare(b.data.pubDate.toISOString()),
+);
 ---
 
 <Layout title="Projects">
@@ -35,7 +36,6 @@ const projectList = await getCollection("projects");
               height={project.data.height}
               width={project.data.width}
               alt={project.data.imageSm.alt}
-              imgStyle={project.data.imgStyle}
               sizes={project.data.sizes}
               slug={project.slug}
             />
