@@ -3,54 +3,9 @@ import SectionHeading from "../ui/SectionHeading.astro";
 import ButtonLink from "../ui/ButtonLink.astro";
 import { Icon } from "astro-icon/components";
 import BlogCard from "../ui/BlogCard.astro";
+import { getCollection } from "astro:content";
 
-const blogs = [
-  {
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-    height: "1000",
-    width: "1000",
-    alt: "blog post",
-    imgStyle: "h-[12.5rem] rounded-t-xl object-cover",
-    blogTitle: "Shorten a string to max length",
-    date: "December 12, 2023",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-    height: "1000",
-    width: "1000",
-    alt: "blog post",
-    imgStyle: "h-[12.5rem] rounded-t-xl object-cover",
-    blogTitle: "Shorten a string to max length",
-    date: "December 12, 2023",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    imgSM:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp",
-    imgLG:
-      "https://res.cloudinary.com/dloisor1x/image/upload/v1705712922/portfolio/blogs/blog-1000w_ps5ptt.webp",
-    sizes: "(max-width: 200px) 100vw, 45vw",
-    height: "1000",
-    width: "1000",
-    alt: "blog post",
-    imgStyle: "h-[12.5rem] rounded-t-xl object-cover",
-    blogTitle: "Shorten a string to max length",
-    date: "December 12, 2023",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-];
+const blogCollection = await getCollection("blogs");
 ---
 
 <div class="layout my-10 py-20 lg:my-20">
@@ -59,33 +14,24 @@ const blogs = [
     class="my-10 grid grid-cols-1 gap-10 md:grid-cols-2 lg:mt-14 lg:grid-cols-3"
   >
     {
-      blogs.map(
-        ({
-          blogTitle,
-          imgSM,
-          imgLG,
-          height,
-          width,
-          alt,
-          imgStyle,
-          sizes,
-          date,
-          description,
-        }) => (
-          <BlogCard
-            blogTitle={blogTitle}
-            imgSM={imgSM}
-            imgLG={imgLG}
-            height={height}
-            width={width}
-            alt={alt}
-            imgStyle={imgStyle}
-            sizes={sizes}
-            date={date}
-            description={description}
-          />
-        ),
-      )
+      blogCollection.map((blog) => (
+        <BlogCard
+          blogTitle={blog.data.blogTitle}
+          excerpt={blog.data.excerpt}
+          imageSm={blog.data.imageSm.url}
+          imageLg={blog.data.imageLg.url}
+          height={blog.data.height}
+          width={blog.data.width}
+          alt={blog.data.imageSm.alt}
+          sizes={blog.data.sizes}
+          slug={blog.slug}
+          date={blog.data.pubDate.toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        />
+      ))
     }
   </div>
   <ButtonLink href="/blogs" variant="secondary">

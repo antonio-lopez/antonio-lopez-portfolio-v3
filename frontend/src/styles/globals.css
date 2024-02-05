@@ -91,6 +91,11 @@
     @apply mx-auto w-11/12;
   }
 
+  .blogLayout {
+    max-width: 51rem;
+    @apply mx-auto w-11/12;
+  }
+
   .dots {
     background-image: radial-gradient(
       hsla(50, 52.17%, 90.98%, 0.2) 5%,

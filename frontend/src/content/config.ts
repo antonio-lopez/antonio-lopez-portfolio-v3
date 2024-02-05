@@ -1,4 +1,3 @@
-import { boolean } from "astro/zod";
 import { z, defineCollection } from "astro:content";
 
 const projectsCollection = defineCollection({
@@ -28,6 +27,28 @@ const projectsCollection = defineCollection({
   }),
 });
 
+const blogsCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    blogTitle: z.string(),
+    excerpt: z.string(),
+    pubDate: z.date(),
+    imageSm: z.object({
+      url: z.string(),
+      alt: z.string(),
+    }),
+    imageLg: z.object({
+      url: z.string(),
+      alt: z.string(),
+    }),
+    height: z.string(),
+    width: z.string(),
+    imgStyle: z.string(),
+    sizes: z.string(),
+  }),
+});
+
 export const collections = {
   projects: projectsCollection,
+  blogs: blogsCollection,
 };

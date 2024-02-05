@@ -1,0 +1,51 @@
+---
+import "@/styles/globals.css";
+import Layout from "@/layouts/Layout.astro";
+import PageHeading from "@/components/ui/PageHeading.astro";
+import BlogCard from "@/components/ui/BlogCard.astro";
+import { getCollection } from "astro:content";
+
+const blogList = await getCollection("blogs");
+blogList.sort(
+  (a, b) =>
+    -a.data.pubDate.toISOString().localeCompare(b.data.pubDate.toISOString()),
+);
+---
+
+<Layout title="Blogs">
+  <section>
+    <div class="dots py-14">
+      <div class="layout">
+        <PageHeading
+          title="Blogs"
+          description="Tutorials, snippets of code, various reflections, and insights gained during my developer journey."
+        />
+      </div>
+    </div>
+
+    <div class="layout mt-10 pb-20">
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {
+          blogList.map((blog) => (
+            <BlogCard
+              blogTitle={blog.data.blogTitle}
+              excerpt={blog.data.excerpt}
+              imageSm={blog.data.imageSm.url}
+              imageLg={blog.data.imageLg.url}
+              height={blog.data.height}
+              width={blog.data.width}
+              alt={blog.data.imageSm.alt}
+              sizes={blog.data.sizes}
+              slug={blog.slug}
+              date={blog.data.pubDate.toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from "./Layout.astro";
+import ProjectShowcaseTitle from "../components/ui/ProjectShowcaseTitle.astro";
+import ButtonLink from "@/components/ui/ButtonLink.astro";
+import { Icon } from "astro-icon/components";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.blogTitle}>
+  <article>
+    <div class="dots py-14">
+      <div class="layout">
+        <ProjectShowcaseTitle title={frontmatter.blogTitle} />
+      </div>
+    </div>
+
+    <div class="blogLayout mb-20 mt-5 flex flex-col space-y-5">
+      <div class="self-center">
+        <picture>
+          <source
+            type="image/webp"
+            srcset={`${frontmatter.imageSm.url} 700w, ${frontmatter.imageLg.url} 1000w`}
+            sizes={frontmatter.sizes}
+          />
+
+          <img
+            src={frontmatter.imageSm.url}
+            loading="lazy"
+            height={frontmatter.height}
+            width={frontmatter.width}
+            alt={frontmatter.imageSm.alt}
+            class={frontmatter.imgStyle}
+          />
+        </picture>
+      </div>
+
+      <p class="lg:text-xl">{frontmatter.excerpt}</p>
+
+      <hr class="border-foreground/20" />
+
+      <slot />
+
+      <ButtonLink href="/blogs" variant="link" size="link">
+        <Icon
+          name="arrow-right"
+          class="mr-[2px] h-6 w-7 rotate-[180deg]"
+          title="link to blogs"
+        />
+        Back to blogs
+      </ButtonLink>
+    </div>
+  </article>
+</BaseLayout>
