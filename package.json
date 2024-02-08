@@ -1,16 +1,40 @@
 {
-  "name": "antonio-lopez-portfolio-v3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "portfolio-frontend",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/rubik": "^5.0.20",
+    "@fontsource/bebas-neue": "^5.0.18",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "astro": "^4.1.3",
+    "astro-icon": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.311.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.3.3"
+  },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "@tailwindcss/typography": "^0.5.10",
+    "cz-conventional-changelog": "^3.3.0",
+    "prettier-plugin-astro": "^0.12.3",
+    "prettier-plugin-tailwindcss": "^0.5.11"
   },
   "config": {
     "commitizen": {

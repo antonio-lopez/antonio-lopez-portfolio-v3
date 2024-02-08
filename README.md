@@ -5,7 +5,6 @@
 Another redesign of my portfolio in the works. Tech stack I plan on using:
 
 - Astro JS
-- Sanity io
 - Tailwind CSS
 - Shadcn UI
 
