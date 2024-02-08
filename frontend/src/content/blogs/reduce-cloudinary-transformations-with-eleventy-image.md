@@ -1,7 +1,7 @@
 ---
 blogTitle: "Reduce Cloudinary Transformations With Eleventy Image"
 pubDate: 2024-02-02
-excerpt: "Relying on cloud based services like Cloudinary for image optimization comes with a price. These are the strategies I implemented to offload transformation operations,"
+excerpt: "Relying on cloud based services like Cloudinary for image optimization comes with a price."
 imageSm:
   url: "https://res.cloudinary.com/dloisor1x/image/upload/v1706811189/portfolio/blogs/image-optimization/glenn-carstens-peters-coding-on-macbook-700w_drq11p.webp"
   alt: "blog cover for image optimization"
@@ -24,7 +24,7 @@ In my search for ways to optimize images, I came across a Software-as-a-Service 
 
 ## Realization
 
-Upon reviewing the details regarding credit usage and the number of transformations allowed per credit, I initially wasn't concerned about exceeding my limit. However, my perspective shifted when I took on a client project. The task involved developing a website for [Sk8 N Meet Santana](https://www.instagram.com/sk8_n_meet_santana/) along with a content management system (CMS). This skateboarding group organizes monthly gatherings for skaters of all skill levels in the Southern California area, striving to create a vibrant and secure space for individuals who identify as female, queer, trans, and/or nonbinary. During each meeting, the group leaders capture photos, storing them in Google Photos for archival purposes and sharing a selection on Instagram. Through our daily discussions about their website requirements, I gained insight into the substantial number of photos accumulated from previous meetups. It became apparent that the Cloudinary limit could be reached sooner than initially anticipated.
+Upon reviewing the details regarding credit usage and the number of transformations allowed per credit, I initially wasn't concerned about exceeding my limit. However, my perspective shifted when I took on a client project. The task involved developing a website for <a href="/projects/sk8-n-meet-santana">Sk8 N Meet Santana</a> along with a content management system (CMS). This skateboarding group organizes monthly gatherings for skaters of all skill levels in the Southern California area, striving to create a vibrant and secure space for individuals who identify as female, queer, trans, and/or nonbinary. During each meeting, the group leaders capture photos, storing them in Google Photos for archival purposes and sharing a selection on Instagram. Through our daily discussions about their website requirements, I gained insight into the substantial number of photos accumulated from previous meetups. It became apparent that the Cloudinary limit could be reached sooner than initially anticipated.
 
 <img src="https://res.cloudinary.com/dloisor1x/image/upload/v1706288390/portfolio/sk8-n-meet-santana/meetup-album-1000w_mz4wpx.webp" alt="Sk8 N Meet project gallery" width="700" loading="lazy" class="my-5 w-full">
 
