@@ -5,9 +5,25 @@ import Hero from "../components/home/Hero.astro";
 import Projects from "@/components/home/Projects.astro";
 import Experience from "@/components/home/Experience.astro";
 import Blogs from "@/components/home/Blogs.astro";
+
+const title = "Antonio Lopez";
+const description =
+  "Antonio Lopez is a frontend developer that strives to create captivating user experiences through innovative design and seamless functionality for the web.";
+const basicType = "website";
+const basicUrl = "https://www.antoniolopez.me/";
+const imageUrl =
+  "https://res.cloudinary.com/dloisor1x/image/upload/v1707450180/portfolio/open-graph/antonio-lopez-og-image_ehdxpk.png";
+const imageAlt = "Antonio Lopez portfolio open graph cover";
 ---
 
-<Layout title="Antonio Lopez">
+<Layout
+  title={title}
+  description={description}
+  basicType={basicType}
+  basicUrl={basicUrl}
+  imageUrl={imageUrl}
+  imageAlt={imageAlt}
+>
   <Hero />
   <Projects />
   <Experience />
