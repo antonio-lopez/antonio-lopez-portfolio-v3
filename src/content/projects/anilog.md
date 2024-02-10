@@ -19,6 +19,8 @@ figmaLink: "https://www.figma.com/file/wGhHnZDT59jzUZmz7RX6dG/ani-tracker?node-i
 tags: ["Next JS", "Storybook", "GraphQL", "Tailwind CSS"]
 order: "02"
 left: true
+ogImage: "https://res.cloudinary.com/dloisor1x/image/upload/v1707516498/portfolio/open-graph/og-image-anilog_yipn3y.png"
+ogImageAlt: "anilog project cover"
 ---
 
 ## About The Project

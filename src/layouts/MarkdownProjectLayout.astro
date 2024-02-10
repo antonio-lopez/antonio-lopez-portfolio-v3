@@ -3,10 +3,24 @@ import BaseLayout from "./Layout.astro";
 import ProjectShowcaseTitle from "../components/ui/ProjectShowcaseTitle.astro";
 import ButtonLink from "@/components/ui/ButtonLink.astro";
 import { Icon } from "astro-icon/components";
-const { frontmatter } = Astro.props;
+const { frontmatter, slug } = Astro.props;
+
+const title = frontmatter.projectTitle;
+const description = frontmatter.excerpt;
+const basicType = "article";
+const basicUrl = `https://www.antoniolopez.me/projects/${slug}`;
+const imageUrl = frontmatter.ogImage;
+const imageAlt = frontmatter.ogImageAlt;
 ---
 
-<BaseLayout title={frontmatter.projectTitle}>
+<BaseLayout
+  title={title}
+  description={description}
+  basicType={basicType}
+  basicUrl={basicUrl}
+  imageUrl={imageUrl}
+  imageAlt={imageAlt}
+>
   <article>
     <div class="dots py-14">
       <div class="layout">

@@ -12,6 +12,8 @@ height: "370"
 width: "700"
 imgStyle: ""
 sizes: "(max-width: 200px) 100vw, 45vw"
+ogImage: "https://res.cloudinary.com/dloisor1x/image/upload/v1707516498/portfolio/open-graph/og-image-pagination_edm8jk.png"
+ogImageAlt: "sanity and nextjs pagination blog cover"
 ---
 
 ## Too Much Of A Good Thing

@@ -10,9 +10,25 @@ blogList.sort(
   (a, b) =>
     -a.data.pubDate.toISOString().localeCompare(b.data.pubDate.toISOString()),
 );
+
+const title = "Antonio Lopez | Blogs";
+const description =
+  "Tutorials, snippets of code, various reflections, and insights gained during my developer journey.";
+const basicType = "website";
+const basicUrl = "https://www.antoniolopez.me/blogs";
+const imageUrl =
+  "https://res.cloudinary.com/dloisor1x/image/upload/v1707516498/portfolio/open-graph/og-image-blogs_oasod0.png";
+const imageAlt = "Antonio Lopez blogs cover";
 ---
 
-<Layout title="Blogs">
+<Layout
+  title={title}
+  description={description}
+  basicType={basicType}
+  basicUrl={basicUrl}
+  imageUrl={imageUrl}
+  imageAlt={imageAlt}
+>
   <section>
     <div class="dots py-14">
       <div class="layout">

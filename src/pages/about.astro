@@ -3,9 +3,25 @@ import "@/styles/globals.css";
 import Layout from "@/layouts/Layout.astro";
 import PageHeading from "@/components/ui/PageHeading.astro";
 import SocialLinks from "@/components/ui/SocialLinks.astro";
+
+const title = "Antonio Lopez | About";
+const description =
+  "Antonio Lopez is a frontend developer that strives to create captivating user experiences through innovative design and seamless functionality for the web.";
+const basicType = "website";
+const basicUrl = "https://www.antoniolopez.me/";
+const imageUrl =
+  "https://res.cloudinary.com/dloisor1x/image/upload/v1707450180/portfolio/open-graph/antonio-lopez-og-image_ehdxpk.png";
+const imageAlt = "Antonio Lopez portfolio open graph cover";
 ---
 
-<Layout title="About">
+<Layout
+  title={title}
+  description={description}
+  basicType={basicType}
+  basicUrl={basicUrl}
+  imageUrl={imageUrl}
+  imageAlt={imageAlt}
+>
   <section>
     <div class="dots py-14">
       <div class="layout">

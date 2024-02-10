@@ -18,6 +18,8 @@ liveLink: "https://what-the-park.vercel.app/"
 figmaLink: "https://www.figma.com/file/yYoBGsOuvNCMQpRdb3vzhJ/What-The-Park?type=design&mode=design&t=PoMywHtsQC8y7Bm4-1"
 tags: ["Next JS", "Shadcn UI", "API", "Tailwind CSS"]
 order: "03"
+ogImage: "https://res.cloudinary.com/dloisor1x/image/upload/v1707516498/portfolio/open-graph/og-image-park_ovnd2p.png"
+ogImageAlt: "what the park project cover"
 ---
 
 ## About The Project

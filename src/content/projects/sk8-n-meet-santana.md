@@ -18,15 +18,17 @@ liveLink: "https://sk8nmeetsantana.com/"
 figmaLink: "https://www.figma.com/file/sEyQoPJFrbL2WFhx2FFDtY/Sk8NMeet?node-id=0%3A1&t=Xbab4PpbzSwldwkS-1"
 tags: ["Next JS", "Sanity io", "Cloudinary", "Storybook"]
 order: "01"
+ogImage: "https://res.cloudinary.com/dloisor1x/image/upload/v1707516498/portfolio/open-graph/og-image-sk8nmeet_hiy4sk.png"
+ogImageAlt: "sk8 n meet santana project cover"
 ---
 
 ## About The Project
 
-Sk8 N Meet Santana is a dedicated website designed to offer information about skate meetups occurring in the local Orange County / Los Angeles area. Centered in Santa Ana, this skateboarding group organizes monthly meetups open to individuals of all skill levels. Their aim is to provide thriving safe spaces for skaters who identify as female, queer, trans and/or nonbinary."
+Sk8 N Meet Santana is a dedicated website designed to offer information about skate meetups occurring in the local Orange County / Los Angeles area. Centered in Santa Ana, this skateboarding group organizes monthly meetups open to individuals of all skill levels. Their aim is to provide thriving safe spaces for skaters who identify as female, queer, trans and/or nonbinary.
 
 ## Project Goals
 
-The primary objective of this project was to develop a website for [Sk8NMeet Santana](https://www.instagram.com/sk8_n_meet_santana/), aligning with their specified requirements. The implementation involved establishing a streamlined process for the team and I to manage the website's content. For content creation, editing, and deletion related to meetups, [Sanity](https://www.sanity.io/) was employed as the Content Management System (CMS). [Cloudinary](https://cloudinary.com/) served as the designated platform for image hosting and optimization. Utilizing the Cloudinary plugin within Sanity Studio simplified the process of choosing photos for a new meetup or updating existing ones.
+The primary objective of this project was to develop a website for [Sk8 N Meet Santana](https://www.instagram.com/sk8_n_meet_santana/), aligning with their specified requirements. The implementation involved establishing a streamlined process for the team and I to manage the website's content. For content creation, editing, and deletion related to meetups, [Sanity](https://www.sanity.io/) was employed as the Content Management System (CMS). [Cloudinary](https://cloudinary.com/) served as the designated platform for image hosting and optimization. Utilizing the Cloudinary plugin within Sanity Studio simplified the process of choosing photos for a new meetup or updating existing ones.
 
 ## Built With
 

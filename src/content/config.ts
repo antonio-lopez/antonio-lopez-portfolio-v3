@@ -24,6 +24,8 @@ const projectsCollection = defineCollection({
     figmaLink: z.string().url().optional(),
     left: z.boolean().optional(),
     order: z.string(),
+    ogImage: z.string().url().optional(),
+    ogImageAlt: z.string().optional(),
   }),
 });
 
@@ -45,6 +47,8 @@ const blogsCollection = defineCollection({
     width: z.string(),
     imgStyle: z.string(),
     sizes: z.string(),
+    ogImage: z.string().url().optional(),
+    ogImageAlt: z.string().optional(),
   }),
 });
 

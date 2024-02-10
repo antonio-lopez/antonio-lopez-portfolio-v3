@@ -12,6 +12,8 @@ height: "370"
 width: "700"
 imgStyle: ""
 sizes: "(max-width: 200px) 100vw, 45vw"
+ogImage: "https://res.cloudinary.com/dloisor1x/image/upload/v1707516498/portfolio/open-graph/og-image-cloudinary_lkdbty.png"
+ogImageAlt: "reduce cloudinary transformations blog cover"
 ---
 
 ## Honeymoon Phase
