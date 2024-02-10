@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://https://www.antoniolopez.me/sitemap-index.xml
