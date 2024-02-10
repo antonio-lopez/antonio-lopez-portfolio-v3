@@ -11,6 +11,7 @@ const basicType = "article";
 const basicUrl = `https://www.antoniolopez.me/blogs/${slug}`;
 const imageUrl = frontmatter.ogImage;
 const imageAlt = frontmatter.ogImageAlt;
+const canonical = `https://www.antoniolopez.me/blogs/${slug}`;
 ---
 
 <BaseLayout
@@ -20,6 +21,7 @@ const imageAlt = frontmatter.ogImageAlt;
   basicUrl={basicUrl}
   imageUrl={imageUrl}
   imageAlt={imageAlt}
+  canonical={canonical}
 >
   <article>
     <div class="dots py-14">

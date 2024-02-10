@@ -11,10 +11,18 @@ interface Props {
   basicUrl: string;
   imageUrl: string;
   imageAlt: string;
+  canonical: string;
 }
 
-const { title, description, basicType, basicUrl, imageUrl, imageAlt } =
-  Astro.props;
+const {
+  title,
+  description,
+  basicType,
+  basicUrl,
+  imageUrl,
+  imageAlt,
+  canonical,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -25,6 +33,7 @@ const { title, description, basicType, basicUrl, imageUrl, imageAlt } =
     <SEO
       title={title}
       description={description}
+      canonical={canonical}
       openGraph={{
         basic: {
           title: title,
